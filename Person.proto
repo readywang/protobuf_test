@@ -1,0 +1,21 @@
+syntax = "proto2";
+package HUST_Person;
+
+message Person{
+	required string name=1;
+	enum Gender{
+		BOY=0;
+		GIRL=1;
+	}
+	required Gender gender=2;
+	required int32 age=3;
+	required string ID=4;
+	message Home{
+		required string country=1;
+		required string province=2;
+		required string county=3;
+		required string addr=4;
+	}
+	optional Home home=5;
+	repeated string phone=6;  
+}
